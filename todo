@@ -1,0 +1,12 @@
+[x] Add GraphQL client
+[x] Split the app into modules
+[x] Figure out how to abstract Apollo GraphQL client
+[x] Try to move everything under common that is not a module :) Nuxt API has config for most things I think.
+[x] Generate TypeScript types from GraphQL schema
+[x] Figure out how to add query parameter to graphql endpoint dynamically like ?api=getUsers
+[x] Why is nuxt building the app twice on container start?
+[x] Set up PrimeVue
+[ ] Install and set up Vuelidate
+[ ] Add i18n
+[ ] nuxt config file is a bit of a mess now, needs organizing, cleanup.
+[ ] See whatever else we had in tooltip and is missing here

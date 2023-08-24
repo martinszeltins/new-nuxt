@@ -1,0 +1,26 @@
+version: '3.7'
+
+services:
+
+  # Client / Vue (Main App Frontend)
+  lipost-client:
+    container_name: lipost-client
+    restart: unless-stopped
+    build: ./docker/containers/client
+    stdin_open: true                # Needed for HMR
+    environment:
+      - CHOKIDAR_USEPOLLING=true    # Needed for HMR
+    ports:
+      - "27752:3000"                # Development server
+      - "7766:3001"                 # Production build
+      - "35547:24678"               # HMR Vite / Nuxt Port
+    volumes:
+      - ./app/client:/var/www
+    networks:
+      - lipost
+
+
+# Networks
+networks:
+  lipost:
+    driver: bridge
